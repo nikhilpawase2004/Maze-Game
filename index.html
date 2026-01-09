@@ -1,23 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Maze Game</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Maze Runner</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div id="controls">
-  <select id="level">
-    <option value="10">Easy</option>
-    <option value="15">Medium</option>
-    <option value="25">Hard</option>
-  </select>
-  <button onclick="startGame()">Start</button>
-</div>
+    <div class="app-container">
+        <header>
+            <h1>Maze Runner</h1>
+            <p class="subtitle">Escape the Grid</p>
+        </header>
 
-<canvas id="mazeCanvas" width="600" height="600"></canvas>
+        <div class="hud">
+            <div class="stat-box">
+                <span class="label">Level</span>
+                <span class="value" id="level-display">Medium</span>
+            </div>
+            <div class="stat-box">
+                <span class="label">Time</span>
+                <span class="value" id="timer">00:00</span>
+            </div>
+            <div class="stat-box">
+                <span class="label">Moves</span>
+                <span class="value" id="moves">0</span>
+            </div>
+        </div>
 
+        <div class="controls-wrapper">
+            <div class="difficulty-toggles">
+                <button data-level="easy" class="btn-diff">Easy</button>
+                <button data-level="medium" class="btn-diff active">Medium</button>
+                <button data-level="hard" class="btn-diff">Hard 🔦</button>
+            </div>
+        </div>
 
-<script src="script.js"></script>
+        <div class="game-viewport">
+            <canvas id="mazeCanvas"></canvas>
+            
+            <div id="winModal" class="modal">
+                <div class="modal-content">
+                    <h2>ESCAPED!</h2>
+                    <div class="modal-stats">
+                        <p>Time: <span id="final-time">--:--</span></p>
+                        <p>Moves: <span id="final-moves">0</span></p>
+                    </div>
+                    <button class="btn-primary" id="btn-restart">Play Again</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="mobile-hint">
+            <span>Slide to move</span>
+        </div>
+        <div class="dev-info">
+        - <span style="color: #00ff88;">Nikhil Pawase..</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
