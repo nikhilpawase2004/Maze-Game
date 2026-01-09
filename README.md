@@ -1,4 +1,4 @@
-# Maze-Game
+# Maze - Game
 🧩 Maze Game (JavaScript Canvas Project)
 
 This project is an interactive Maze Game built using HTML, CSS, and JavaScript, where the player navigates through a randomly generated maze to reach the destination. The game uses the HTML5 Canvas for rendering the maze and player movements in real time.
